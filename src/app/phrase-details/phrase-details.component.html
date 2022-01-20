@@ -1,0 +1,18 @@
+<div *ngIf="phrase; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h2>Selected Phrase Details</h2>
+
+  <div>ID:{{phrase?.id}}</div>
+  <div>Value:{{phrase?.value}}</div>
+  <div>Language:{{phrase?.language}}</div>
+
+</ng-template>
+
+<ng-template #elseBlock>
+  <h2>Deteils not found</h2>
+
+
+</ng-template>
+
+<button type="button" (click)="GoToPhrasesList()">Go to phrases list</button>
